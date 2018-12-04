@@ -10,7 +10,11 @@ const API_STEM: &'static str = "https://crates.io/api/v1";
 const CRATES_ROUTE: &'static str = "crates";
 
 #[derive(Debug, Serialize, Deserialize)]
-#[serde(tag = "badge_type", content = "attributes", rename_all = "kebab-case")]
+#[serde(
+    tag = "badge_type",
+    content = "attributes",
+    rename_all = "kebab-case"
+)]
 pub enum Badge {
     Appveyor {
         id: Option<String>,
