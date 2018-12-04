@@ -55,4 +55,4 @@ matrix:
 script: |
   cargo build --verbose &&
   cargo test  --verbose &&
-  cargo doc   --verbose
+  travis_wait cargo doc --verbose
