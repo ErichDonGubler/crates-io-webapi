@@ -1,3 +1,7 @@
+extern crate derive_more;
+extern crate reqwest;
+extern crate serde_derive;
+
 use {
     derive_more::Display,
     reqwest::{get, Error as ReqwestError},
