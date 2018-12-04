@@ -1,0 +1,203 @@
+{
+  "crate": {
+    "id": "adhesion",
+    "name": "adhesion",
+    "updated_at": "2018-03-06T22:29:19.492032+00:00",
+    "versions": [
+      83601,
+      66884,
+      62522,
+      60285,
+      58982
+    ],
+    "keywords": [
+      "invariant",
+      "design",
+      "contract"
+    ],
+    "categories": [
+      "algorithms",
+      "development-tools::testing",
+      "rust-patterns"
+    ],
+    "badges": [
+      {
+        "badge_type": "appveyor",
+        "attributes": {
+          "id": null,
+          "service": null,
+          "repository": "ErichDonGubler/adhesion-rs",
+          "project_name": null,
+          "branch": null
+        }
+      },
+      {
+        "badge_type": "travis-ci",
+        "attributes": {
+          "branch": null,
+          "repository": "ErichDonGubler/adhesion-rs"
+        }
+      }
+    ],
+    "created_at": "2017-07-07T06:41:33.389615+00:00",
+    "downloads": 865,
+    "recent_downloads": 164,
+    "max_version": "0.5.0",
+    "description": "A set of macros for design by contact in Rust. The design of this library was inspired by D's contract programming facilities.",
+    "homepage": null,
+    "documentation": "https://docs.rs/adhesion",
+    "repository": "https://github.com/ErichDonGubler/adhesion-rs",
+    "links": {
+      "version_downloads": "/api/v1/crates/adhesion/downloads",
+      "versions": null,
+      "owners": "/api/v1/crates/adhesion/owners",
+      "owner_team": "/api/v1/crates/adhesion/owner_team",
+      "owner_user": "/api/v1/crates/adhesion/owner_user",
+      "reverse_dependencies": "/api/v1/crates/adhesion/reverse_dependencies"
+    },
+    "exact_match": false
+  },
+  "versions": [
+    {
+      "id": 83601,
+      "crate": "adhesion",
+      "num": "0.5.0",
+      "dl_path": "/api/v1/crates/adhesion/0.5.0/download",
+      "readme_path": "/api/v1/crates/adhesion/0.5.0/readme",
+      "updated_at": "2018-03-06T22:29:19.492032+00:00",
+      "created_at": "2018-03-06T22:29:19.492032+00:00",
+      "downloads": 151,
+      "features": {},
+      "yanked": false,
+      "license": "MIT",
+      "links": {
+        "dependencies": "/api/v1/crates/adhesion/0.5.0/dependencies",
+        "version_downloads": "/api/v1/crates/adhesion/0.5.0/downloads",
+        "authors": "/api/v1/crates/adhesion/0.5.0/authors"
+      },
+      "crate_size": null
+    },
+    {
+      "id": 66884,
+      "crate": "adhesion",
+      "num": "0.4.0",
+      "dl_path": "/api/v1/crates/adhesion/0.4.0/download",
+      "readme_path": "/api/v1/crates/adhesion/0.4.0/readme",
+      "updated_at": "2017-11-30T03:15:40.891209+00:00",
+      "created_at": "2017-09-27T18:52:57.338358+00:00",
+      "downloads": 191,
+      "features": {},
+      "yanked": false,
+      "license": "MIT",
+      "links": {
+        "dependencies": "/api/v1/crates/adhesion/0.4.0/dependencies",
+        "version_downloads": "/api/v1/crates/adhesion/0.4.0/downloads",
+        "authors": "/api/v1/crates/adhesion/0.4.0/authors"
+      },
+      "crate_size": null
+    },
+    {
+      "id": 62522,
+      "crate": "adhesion",
+      "num": "0.3.0",
+      "dl_path": "/api/v1/crates/adhesion/0.3.0/download",
+      "readme_path": "/api/v1/crates/adhesion/0.3.0/readme",
+      "updated_at": "2017-11-30T03:07:16.243800+00:00",
+      "created_at": "2017-08-16T05:44:24.354144+00:00",
+      "downloads": 183,
+      "features": {},
+      "yanked": false,
+      "license": "MIT",
+      "links": {
+        "dependencies": "/api/v1/crates/adhesion/0.3.0/dependencies",
+        "version_downloads": "/api/v1/crates/adhesion/0.3.0/downloads",
+        "authors": "/api/v1/crates/adhesion/0.3.0/authors"
+      },
+      "crate_size": null
+    },
+    {
+      "id": 60285,
+      "crate": "adhesion",
+      "num": "0.2.0",
+      "dl_path": "/api/v1/crates/adhesion/0.2.0/download",
+      "readme_path": "/api/v1/crates/adhesion/0.2.0/readme",
+      "updated_at": "2017-11-30T02:28:33.515582+00:00",
+      "created_at": "2017-07-21T14:33:10.313807+00:00",
+      "downloads": 173,
+      "features": {},
+      "yanked": false,
+      "license": "MIT",
+      "links": {
+        "dependencies": "/api/v1/crates/adhesion/0.2.0/dependencies",
+        "version_downloads": "/api/v1/crates/adhesion/0.2.0/downloads",
+        "authors": "/api/v1/crates/adhesion/0.2.0/authors"
+      },
+      "crate_size": null
+    },
+    {
+      "id": 58982,
+      "crate": "adhesion",
+      "num": "0.1.0",
+      "dl_path": "/api/v1/crates/adhesion/0.1.0/download",
+      "readme_path": "/api/v1/crates/adhesion/0.1.0/readme",
+      "updated_at": "2017-11-30T02:35:47.447380+00:00",
+      "created_at": "2017-07-07T06:41:33.389615+00:00",
+      "downloads": 167,
+      "features": {},
+      "yanked": false,
+      "license": "MIT",
+      "links": {
+        "dependencies": "/api/v1/crates/adhesion/0.1.0/dependencies",
+        "version_downloads": "/api/v1/crates/adhesion/0.1.0/downloads",
+        "authors": "/api/v1/crates/adhesion/0.1.0/authors"
+      },
+      "crate_size": null
+    }
+  ],
+  "keywords": [
+    {
+      "id": "invariant",
+      "keyword": "invariant",
+      "created_at": "2016-08-21T23:18:22.167013+00:00",
+      "crates_cnt": 4
+    },
+    {
+      "id": "design",
+      "keyword": "design",
+      "created_at": "2017-07-07T06:41:33.389615+00:00",
+      "crates_cnt": 2
+    },
+    {
+      "id": "contract",
+      "keyword": "contract",
+      "created_at": "2017-07-07T06:41:33.389615+00:00",
+      "crates_cnt": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": "algorithms",
+      "category": "Algorithms",
+      "slug": "algorithms",
+      "description": "Rust implementations of core algorithms such as hashing, sorting, searching, and more.",
+      "created_at": "2017-01-17T19:13:05.112025+00:00",
+      "crates_cnt": 333
+    },
+    {
+      "id": "development-tools::testing",
+      "category": "Testing",
+      "slug": "development-tools::testing",
+      "description": "Crates to help you verify the correctness of your code.",
+      "created_at": "2016-12-30T23:42:37.777395+00:00",
+      "crates_cnt": 118
+    },
+    {
+      "id": "rust-patterns",
+      "category": "Rust patterns",
+      "slug": "rust-patterns",
+      "description": "Shared solutions for particular situations specific to programming in Rust.",
+      "created_at": "2017-01-17T19:13:05.112025+00:00",
+      "crates_cnt": 214
+    }
+  ]
+}
