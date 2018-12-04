@@ -1,13 +1,7 @@
 use {
     derive_more::Display,
-    reqwest::{
-        get,
-        Error as ReqwestError,
-    },
-    serde_derive::{
-        Deserialize,
-        Serialize,
-    },
+    reqwest::{get, Error as ReqwestError},
+    serde_derive::{Deserialize, Serialize},
     std::collections::HashMap,
 };
 
@@ -142,34 +136,38 @@ pub struct ErrorDetail {
 }
 
 pub fn get_crate(name: &str) -> Result<Option<FullCrateDetails>, GetCrateError> {
-    use self::{
-        GetCrateApiResponse::*,
-        GetCrateError::*,
-    };
+    use self::{GetCrateApiResponse::*, GetCrateError::*};
 
-    match get(&format!("{}/{}/{}", API_STEM, CRATES_ROUTE, name)).map_err(Reqwest)?.json().map_err(Reqwest)? {
+    match get(&format!("{}/{}/{}", API_STEM, CRATES_ROUTE, name))
+        .map_err(Reqwest)?
+        .json()
+        .map_err(Reqwest)?
+    {
         Found(r) => Ok(Some(r)),
-        Error(GetCrateErrorResponse { errors }) => if errors.len() == 1 && errors[0].detail == "Not Found" {
-            Ok(None)
-        } else {
-            Err(Api(GetCrateErrorResponse { errors }))
-        },
+        Error(GetCrateErrorResponse { errors }) => {
+            if errors.len() == 1 && errors[0].detail == "Not Found" {
+                Ok(None)
+            } else {
+                Err(Api(GetCrateErrorResponse { errors }))
+            }
+        }
     }
 }
 
 pub fn get_latest_version_of_crate(name: &str) -> Result<Option<(String, Version)>, GetCrateError> {
     match get_crate(name) {
         Ok(Some(FullCrateDetails {
-            crate_: Crate {
-                id,
-                ..
-            },
+            crate_: Crate { id, .. },
             versions,
             ..
         })) => {
             // NOTE: This assumes that versions are sorted in descending order.
-            Ok(versions.into_iter().filter(|v| !v.yanked).next().map(|v| (id, v)))
-        },
+            Ok(versions
+                .into_iter()
+                .filter(|v| !v.yanked)
+                .next()
+                .map(|v| (id, v)))
+        }
         other => other.map(|o| o.map(|_| unreachable!())),
     }
 }
