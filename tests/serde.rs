@@ -1,3 +1,5 @@
+extern crate crates_io_webapi;
+
 use crates_io_webapi::FullCrateDetails;
 
 #[test]
