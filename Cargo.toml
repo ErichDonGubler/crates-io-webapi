@@ -1,13 +1,13 @@
 [package]
 name = "crates-io-webapi"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Erich Gubler <erichdongubler@gmail.com>"]
 edition = "2018"
 
 [dependencies]
 serde = "1.0.80"
 serde_derive = "1.0.80"
-reqwest = "0.9.5"
+reqwest = { version  = "0.10", features = ["json"] }
 derive_more = "0.99.2"
 
 [dev-dependencies]

@@ -1,6 +1,6 @@
 use {
     derive_more::Display,
-    reqwest::{get, Error as ReqwestError},
+    reqwest::{Client, Error as ReqwestError},
     serde_derive::{Deserialize, Serialize},
     std::collections::HashMap,
 };
@@ -139,12 +139,16 @@ pub struct ErrorDetail {
     pub detail: String,
 }
 
-pub fn get_crate(name: &str) -> Result<Option<FullCrateDetails>, GetCrateError> {
+pub async fn get_crate(client: &Client, name: &str) -> Result<Option<FullCrateDetails>, GetCrateError> {
     use self::{GetCrateApiResponse::*, GetCrateError::*};
 
-    match get(&format!("{}/{}/{}", API_STEM, CRATES_ROUTE, name))
+    match client
+        .get(&format!("{}/{}/{}", API_STEM, CRATES_ROUTE, name))
+        .send()
+        .await
         .map_err(Reqwest)?
         .json()
+        .await
         .map_err(Reqwest)?
     {
         Found(r) => Ok(Some(r)),
@@ -158,8 +162,8 @@ pub fn get_crate(name: &str) -> Result<Option<FullCrateDetails>, GetCrateError> 
     }
 }
 
-pub fn get_latest_version_of_crate(name: &str) -> Result<Option<(String, Version)>, GetCrateError> {
-    match get_crate(name) {
+pub async fn get_latest_version_of_crate(client: &Client, name: &str) -> Result<Option<(String, Version)>, GetCrateError> {
+    match get_crate(client, name).await {
         Ok(Some(FullCrateDetails {
             crate_: Crate { id, .. },
             versions,
