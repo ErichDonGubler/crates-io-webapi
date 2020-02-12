@@ -1,5 +1,3 @@
-extern crate crates_io_webapi;
-
 use crates_io_webapi::get_crate;
 
 #[test]
