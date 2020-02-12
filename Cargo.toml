@@ -5,10 +5,10 @@ authors = ["Erich Gubler <erichdongubler@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-serde = "1.0.80"
-serde_derive = "1.0.80"
+derive_more = "0.99"
 reqwest = { version  = "0.10", features = ["json"] }
-derive_more = "0.99.2"
+serde = "1.0"
+serde_derive = "1.0"
 
 [dev-dependencies]
-serde_json = "1.0.33"
+serde_json = "1.0"
